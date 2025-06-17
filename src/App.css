@@ -1,0 +1,28 @@
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make sure html and body take full height */
+html, body {
+  height: 100%;
+}
+
+/* Create a full-height layout */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure main content grows to fill space between navbar and footer */
+main {
+  flex: 1;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

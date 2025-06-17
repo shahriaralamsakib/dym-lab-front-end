@@ -1,0 +1,49 @@
+.publications-container {
+  padding: 24px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.publications-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.publications-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.publication-item {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.publication-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.publication-title:hover {
+  text-decoration: underline;
+}
+
+.publication-meta {
+  font-size: 14px;
+  color: #718096;
+  margin-bottom: 4px;
+}
+
+.publication-link {
+  font-size: 14px;
+  color: #718096;
+  word-break: break-all;
+}

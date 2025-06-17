@@ -1,4 +1,5 @@
 import React from 'react';
+import './Publications.css';
 
 
 import { useEffect, useState } from 'react';
@@ -14,19 +15,20 @@ export default function Publications() {
   }, []);
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Publications</h1>
-      <ul className="space-y-4">
+    <div className="publications-container">
+      <h1 className="publications-title">Publications</h1>
+      <ul className="publications-list">
         {publicationsData.map((pub, index) => (
-          <li key={index} className="border p-4 rounded shadow">
-            <h2 className="text-lg font-semibold text-blue-600 hover:underline">
+          <li key={index} className="publication-item">
+            <h2 className="publication-title">
               {pub.title}
             </h2>
-            <p className="text-sm text-gray-600">Authors: {pub.authors}, {pub.year}</p>
-            <a href={pub.link} className="text-sm text-gray-600">{pub.link}</a>
+            <p className="publication-meta">Authors: {pub.authors}, {pub.year}</p>
+            <a href={pub.link} className="publication-link">{pub.link}</a>
           </li>
         ))}
       </ul>
     </div>
+
   );
 }

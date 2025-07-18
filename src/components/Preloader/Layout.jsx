@@ -7,13 +7,20 @@ const Layout = ({ children }) => {
   const location = useLocation();
 
   useEffect(() => {
-    // Show loader on route change
-    setLoading(true);
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 800); // simulate delay
-    return () => clearTimeout(timer);
-  }, [location]);
+    // Skip loader for nested dashboard routes
+    const isDashboardRoute = location.pathname.startsWith('/dashboard');
+
+    if (!isDashboardRoute) {
+      setLoading(true);
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 800); // simulate delay
+
+      return () => clearTimeout(timer);
+    } else {
+      setLoading(false); // disable loader for dashboard
+    }
+  }, [location.pathname]);
 
   return (
     <>

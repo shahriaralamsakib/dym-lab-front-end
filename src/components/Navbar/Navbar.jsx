@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTractor } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import { fetchLabData } from '../../services/api'
+import { LockClosedIcon } from '@heroicons/react/24/solid'
 
 function Navbar() {
   const [labData, setLabData] = useState(null)
@@ -27,6 +28,7 @@ function Navbar() {
         <li><Link to="/about">About Lab</Link></li>
         <li><Link to="/publications">Publications</Link></li>
         <li><Link to="/news-events">News & Events</Link></li>
+        <li><Link to="/login"><LockClosedIcon className="w-6 h-6 text-white" /></Link></li>
       </ul>
     </nav>
   )
